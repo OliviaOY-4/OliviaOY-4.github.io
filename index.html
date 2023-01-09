@@ -1,1 +1,193 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Olivia Ouyang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!---------Header----------->
+    <div id:="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-sharp fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Welcome to</p>
+                <h1><span>Olivia Ouyang's</span> <br> Personal Website</h1>
+            </div>
+        </div>
+    </div>
+    <!---------about----------->
+    <div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/userimage.jpeg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="subtitle">About Me</h1><br>
+                        <p>
+                            Hi, my name is Olivia Ouyang, a second year student at the University of Waterloo. I'm pursuing a Bachelor of Computer Science (BCS) degree with a specialization in Artificial Intelligence. 
+                           <br><br> 
+                            I'm actively seeking Summer 2023 opportunities in Software Development/Engineering. Please check out my <a href="images/Olivia-Ouyang-resume.pdf" download style="color: #ff004f">Resume</a> below and reach me at my email!
+                        </p>
+                        <div class="tabtitles">
+                            <p class="tablinks active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tablinks" onclick="opentab('experiences')">Experiences</p>
+                            <p class="tablinks" onclick="opentab('courses')">Courses</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Languages: </span><br>Java, C/C++, Python, JavaScript, HTML, and CSS </li>
+                                <li><span>Frameworks & Tools: </span><br>Spring, React, Flask, Express, Flask, Node, Redux, PostgreSQL, Git, AWS, Docker, Angular,Postman, JIRA, Confluence</li>
+                                <li><span>Soft Skills: </span><br>Critical thinking, Communication, Curiosity, Creativity, and Continuous learning</li>
+                            </ul>
+                            <a href="images/Olivia-Ouyang-resume.pdf" download class="btn btn2">Download Resume</a>
+                        </div>
+
+                        <div class="tab-contents" id="experiences">
+                            <ul>
+                                <li><span>Apr - Aug 2022: </span><br>Software Developer at OpenText</li>
+                                <li>i) Experience working with large teams within Agile environment</li>
+                                <li>ii) Developed public RESTful APIs within an MVC-based Case Management system</li>
+                                <li>iii) Implemented critical application features using Next and Redux</li>
+                            </ul>
+                            <a href="images/Olivia-Ouyang-resume.pdf" download class="btn btn2">Download Resume</a>
+                        </div>
+
+                        <div class="tab-contents" id="courses">
+                            <ul>
+                                <li><span>CS: </span><br>Programming Principles, Introduction to Data Abstraction and Implementation, Foundations of Sequential Programs, Object-Oriented Software Development, Computer Organization and Design, Digital Circuits and Systems</li>
+                                <li><span>Math: </span><br>Algebra, Calculus, Linear Algebra, Statistics, Introduction to Combinatorics</li>
+                            </ul>
+                            <a href="images/Olivia-Ouyang-resume.pdf" download class="btn btn2">Download Resume</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------Porfolio----------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/ecommerce.png">
+                    <div class="layer">
+                        <h2>E-Commerce Website</h2>
+                        <p>A React based web application</p>
+                        <a href="https://github.com/OliviaOY-4/E-CommerceProject">🔎More</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/app.png">
+                    <div class="layer">
+                        <h2>Journal</h2>
+                        <p>A Full Stack MERN Social Media Application</p>
+                        <a href="https://github.com/OliviaOY-4/Journal">🔎 More</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/game.png">
+                    <div class="layer">
+                        <h2>Battle of Clans</h2>
+                        <p>A JAVA-BASED GUI Similation</p>
+                        <a href="https://www.greenfoot.org/scenarios/26294">🔎More</a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/OliviaOY-4" class="btn">See more</a>
+        </div>
+    </div>
+    <!---------Contact----------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p>✉️ oliviayi2000@gmail.com</p>
+                    <p>📞 +1 (548)-993-8600</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/oliviayixinoy/"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/oliviayixinoy/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-right" style="float:right"></div>
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea Name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© Copyright 2022 Olivia Ouyang. Last updated January, 2023.</p>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tablinks");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemen = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemen.style.right = "0";
+        }
+        function closemenu() {
+            sidemen.style.right = "200px";
+        }
+    </script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbztZxtKbQrU3V9cZ5O2wzULAyATXsN1gGQQbS_-ovsuhorvEe4OB9dwIeQzGdB7jqo4hg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+
+</html>
