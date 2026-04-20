@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(212, 132, 106, 0.14), transparent 32%),
+    radial-gradient(circle at 85% 12%, rgba(168, 184, 164, 0.18), transparent 24%),
+    linear-gradient(180deg, #fffaf6 0%, #fdf8f2 48%, #fdfaf6 100%);
+  color: #2D2926;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(45, 41, 38, 0.04) 1px, transparent 0);
+  background-size: 26px 26px;
+  opacity: 0.35;
+  z-index: -1;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Subtle animated gradient for hero */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-10px) translateX(6px); }
+}
+
+@keyframes swaySlow {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #FDFAF6 0%, #FFF0E8 40%, #F0F5F2 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+.section-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.35), transparent 26%, transparent 74%, rgba(255,255,255,0.2));
+}
+
+.section-card {
+  position: relative;
+  border: 1px solid rgba(197, 179, 168, 0.7);
+  background: rgba(253, 250, 246, 0.8);
+  box-shadow: 0 18px 50px rgba(95, 72, 58, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.card-lift {
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(95, 72, 58, 0.12);
+  border-color: rgba(212, 132, 106, 0.28);
+}
+
+.ambient-orb {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.ambient-note {
+  animation: swaySlow 6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Skill badge hover */
+.skill-badge {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.skill-badge:hover {
+  transform: translateY(-2px);
+}
+
+/* Project card */
+.project-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Nav link underline animation */
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #D4846A;
+  border-radius: 2px;
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FDFAF6;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4846A;
+  border-radius: 3px;
+}
