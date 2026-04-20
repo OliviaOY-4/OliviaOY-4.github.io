@@ -43,7 +43,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-warm-gray md:text-xl">
-              Waterloo CS new grad building recommendation models, developer tools,
+              UWaterloo CS new grad building recommendation models, developer tools,
               and backend systems with the same goal: make complex things feel
               intuitive, useful, and worth trusting.
             </p>
